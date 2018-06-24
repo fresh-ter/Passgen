@@ -36,7 +36,7 @@ class NameClass():
 
 	def nameclassHelp(self):
 		print("""
-* NameClass v0.0 by Name (c) 1070 *
+* NameClass v0.0 by Name (c) 1970 *
 
 -----------
 
