@@ -86,6 +86,8 @@ def menu_LuPa():
 			index = show_menu_Passgen(index)
 			menu_Passgen_end = index
 
+			index += 1
+
 			menu_Enigma_begin = index
 			index = show_menu_Enigma(index)
 			menu_Enigma_end = index
