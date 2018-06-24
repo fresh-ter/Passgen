@@ -56,6 +56,9 @@ def menu_lupa_loop():
 	print()
 	print("~~~~~~~~~~~~UTILITY~~~~~~~~~~~~")
 	print()
+
+	print(menu_Passgen_begin)
+	print(menu_Enigma_begin)
 	
 	show_menu_Passgen(menu_Passgen_begin)
 	
@@ -67,6 +70,10 @@ def menu_lupa_loop():
 	print()
 
 def menu_LuPa():
+	global menu_Passgen_begin
+	global menu_Passgen_end
+	global menu_Enigma_begin
+	global menu_Enigma_end
 
 	number = 0
 	ind = 0
@@ -109,9 +116,14 @@ def menu_LuPa():
 				system("cls")
 				exit()
 
+		print(menu_Passgen_begin)
+		print(menu_Passgen_end)
+		print(menu_Enigma_begin)
+		print(menu_Enigma_end)
 		if number == 99:
 			system("cls")
 			exit()
+
 
 		elif number >= menu_Passgen_begin and number <=menu_Passgen_end:
 			menu_Passgen(number - menu_Passgen_begin)
