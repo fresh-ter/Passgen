@@ -4,10 +4,19 @@ from sys import argv
 from os import system
 from getpass import getpass
 
+
+
 from Passgen import init_Passgen, show_menu_Passgen, menu_Passgen
 
 menu_Passgen_begin = 0
 menu_Passgen_end = 0
+
+from Enigma import init_Enigma, show_menu_Enigma, menu_Enigma
+
+menu_Enigma_begin = 0
+menu_Enigma_end = 0
+
+
 
 LOGIN = "root"
 PASSWORD = "root"
@@ -32,6 +41,10 @@ def menu_lupa_start():
 	index = show_menu_Passgen(index)
 	menu_Passgen_end = index
 
+	menu_Enigma_begin = index
+	index = show_menu_Enigma(index)
+	menu_Enigma_end = index
+
 	print()
 	print("LuPa")
 	print("99  Exit")
@@ -46,6 +59,7 @@ def menu_lupa_loop():
 	
 	show_menu_Passgen(menu_Passgen_begin)
 	
+	show_menu_Enigma(menu_Enigma_begin)
 	
 	print()
 	print("LuPa")
@@ -72,6 +86,10 @@ def menu_LuPa():
 			index = show_menu_Passgen(index)
 			menu_Passgen_end = index
 
+			menu_Enigma_begin = index
+			index = show_menu_Enigma(index)
+			menu_Enigma_end = index
+
 			print()
 			print("LuPa")
 			print("99  Exit")
@@ -95,6 +113,8 @@ def menu_LuPa():
 
 		elif number >= menu_Passgen_begin and number <=menu_Passgen_end:
 			menu_Passgen(number - menu_Passgen_begin)
+		elif number >= menu_Enigma_begin and number <=menu_Enigma_end:
+			menu_Enigma(number - menu_Enigma_begin)
 
 
 		print()
@@ -124,6 +144,8 @@ def login():
 def arguments_cmd():
 	if argv[1] == 'passgen':
 		init_Passgen(argv)
+	elif argv[1] == 'enigma':
+		init_Enigma(argv)
 	else:
 		print('[', argv[1], "] - not found utility.")
 
