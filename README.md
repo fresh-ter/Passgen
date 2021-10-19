@@ -1,2 +1,2 @@
-# LuPa
-Utility Manager around Information Security
+# Passgen
+A simple password generator
